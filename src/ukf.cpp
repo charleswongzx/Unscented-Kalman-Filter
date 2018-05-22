@@ -417,28 +417,4 @@ void UKF::UpdateUKF(MeasurementPackage meas_package, MatrixXd Zsig, int n_z) {
     // Update state mean and covariance
     x_ += K * z_diff;
     P_ -= K * S * K.transpose();
-
-
-//    // Calculate Normalized Innovation Squared (NIS)
-//    if (meas_package.sensor_type_ == MeasurementPackage::LASER && use_laser_)
-//    {
-//        nis_laser_ = z_diff.transpose() * S.inverse() * z_diff;
-//
-//        ofstream fout;
-//        fout.open("../process_nis/NIS_data.csv", ios::app);
-//        fout << "LASER," << nis_laser_;
-//        fout << "\n";
-//        fout.close();
-//
-//    }
-//    else if (meas_package.sensor_type_ == MeasurementPackage::RADAR && use_radar_)
-//    {
-//        nis_radar_ = z_diff.transpose() * S.inverse() * z_diff;
-//
-//        ofstream fout;
-//        fout.open("../process_nis/NIS_data.csv", ios::app);
-//        fout << "RADAR," << nis_radar_;
-//        fout << "\n";
-//        fout.close();
-//    }
 }
