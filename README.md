@@ -20,8 +20,6 @@ In any case, I reverted the lidar routine as described in the EKF, which allowed
 
 ---
 
----
-
 ## Other Important Dependencies
 * cmake >= 3.5
   * All OSes: [click here for installation instructions](https://cmake.org/install/)
